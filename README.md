@@ -2,7 +2,7 @@
 
 An AI-powered Task Management Assistant that converts **natural language task requests** into structured tasks using a Large Language Model (Groq), stores them in SQLite, and displays them through a simple web interface.
 
-This project was built as part of the **Pyngyn Backend Engineer Assignment**.
+
 
 ---
 
@@ -146,9 +146,9 @@ https://console.groq.com
 # ⚙️ Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Task-Assistant.git
+git clone https://github.com/prashantdarshanwar/AI-Task-Assistant-with-Web-API.git
 
-cd AI-Task-Assistant
+cd AI-Task-Assistant-with-Web-API
 ```
 
 ---
@@ -580,7 +580,7 @@ prashantdarshanwar70715@gmail.com
 GitHub
 
 ```
-https://github.com/YOUR_USERNAME
+https://github.com/prashantdarshanwar/AI-Task-Assistant-with-Web-API.git
 ```
 
 ---
