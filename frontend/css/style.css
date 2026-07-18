@@ -1,0 +1,475 @@
+/* ===========================================
+   Global
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#f4f7fb;
+
+    color:#333;
+
+}
+
+/* ===========================================
+   Container
+=========================================== */
+
+.container{
+
+    width:min(900px,95%);
+
+    margin:40px auto;
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/* ===========================================
+   Header
+=========================================== */
+
+header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+header h1{
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+
+}
+
+header p{
+
+    color:#666;
+
+}
+
+/* ===========================================
+   Textarea
+=========================================== */
+
+textarea{
+
+    width:100%;
+
+    min-height:140px;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    resize:vertical;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+textarea:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/* ===========================================
+   Button
+=========================================== */
+
+.button-row{
+
+    margin-top:20px;
+
+}
+
+button{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+button:disabled{
+
+    background:#94a3b8;
+
+    cursor:not-allowed;
+
+}
+
+/* ===========================================
+   Hint
+=========================================== */
+
+.hint{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:#777;
+
+}
+
+/* ===========================================
+   Task Header
+=========================================== */
+
+.task-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:20px 0;
+
+}
+
+/* ===========================================
+   Task Card
+=========================================== */
+
+.task{
+
+    background:white;
+
+    padding:20px;
+
+    margin-bottom:18px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    animation:fade .3s ease;
+
+}
+
+.task h3{
+
+    color:#1e293b;
+
+    margin-bottom:10px;
+
+}
+
+.task p{
+
+    margin:8px 0;
+
+}
+
+.task small{
+
+    color:#666;
+
+}
+
+/* ===========================================
+   Priority Badges
+=========================================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+.high{
+
+    background:#ef4444;
+
+}
+
+.medium{
+
+    background:#f59e0b;
+
+}
+
+.low{
+
+    background:#22c55e;
+
+}
+
+/* ===========================================
+   Action Buttons
+=========================================== */
+
+.actions{
+
+    margin-top:15px;
+
+}
+
+.actions button{
+
+    margin-right:10px;
+
+}
+
+.delete-btn{
+
+    background:#dc2626;
+
+}
+
+.delete-btn:hover{
+
+    background:#b91c1c;
+
+}
+
+.edit-btn{
+
+    background:#0ea5e9;
+
+}
+
+.edit-btn:hover{
+
+    background:#0284c7;
+
+}
+
+/* ===========================================
+   Empty State
+=========================================== */
+
+.empty{
+
+    text-align:center;
+
+    padding:60px;
+
+    color:#777;
+
+}
+
+.empty h3{
+
+    margin:15px 0;
+
+}
+
+/* ===========================================
+   Loading Overlay
+=========================================== */
+
+#loadingOverlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,255,255,.8);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.loader{
+
+    width:50px;
+
+    height:50px;
+
+    border:5px solid #ddd;
+
+    border-top:5px solid #2563eb;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===========================================
+   Toast
+=========================================== */
+
+#toast{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    background:#22c55e;
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:8px;
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    transition:.3s;
+
+    z-index:1000;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================================
+   Footer
+=========================================== */
+
+footer{
+
+    text-align:center;
+
+    margin:30px 0;
+
+    color:#888;
+
+}
+
+/* ===========================================
+   Animation
+=========================================== */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================================
+   Responsive
+=========================================== */
+
+@media(max-width:768px){
+
+    .container{
+
+        width:95%;
+
+        padding:20px;
+
+    }
+
+    .task-header{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        align-items:flex-start;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}
