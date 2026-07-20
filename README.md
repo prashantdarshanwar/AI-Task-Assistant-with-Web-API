@@ -20,9 +20,9 @@ Build a full-stack AI Task Assistant that:
   - Due Date
   - Priority
 
-- Stores the task in SQLite
-- Displays tasks on a minimal frontend
-- Provides a FastAPI REST API
+- Stores the task in SQLite  
+- Displays tasks on a minimal frontend 
+- Provides a FastAPI REST API 
 
 ---
 
